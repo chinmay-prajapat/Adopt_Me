@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
@@ -18,9 +19,18 @@
   },
   "homepage": "https://github.com/chinmay-prajapat/Adopt_Me#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
-    "parcel": "^2.0.1",
+    "parcel": "^1.12.3",
     "prettier": "^2.5.1"
-  }
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": [
+    "last 2 Chrome version"
+  ]
 }

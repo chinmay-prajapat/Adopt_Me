@@ -1,15 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Pet from "./Pet";
+
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 const App = () => {
   return (
     <div>
-      <h1 id="my-brand">Adop-Me</h1>
+      <h1>Adopt Me</h1>
+      <Router>
+        <Routes>
+          <Route path="/details/:id" element={<Details />} />
 
-      <SearchParams />
+          <Route path="/" element={<SearchParams />} />
+        </Routes>
+      </Router>
     </div>
   );
 };

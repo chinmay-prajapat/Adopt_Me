@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Pet from "./Pet";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import { BrowserRouter as Router, Rout } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 const App = () => {
   return (
     <div>

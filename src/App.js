@@ -3,18 +3,25 @@ import ReactDOM from "react-dom";
 
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <h1>Adopt Me</h1>
       <Router>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
+        <header>
+          <Link to="/">
+            <h1>Adopt Me!</h1>
+          </Link>
+        </header>
+        <Switch>
+          <Route path="/details/:id">
+            <Details />
+          </Route>
+          <Route path="/">
+            <SearchParams />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
